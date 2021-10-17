@@ -83,11 +83,17 @@ footer {
 }
 
 footer a{
-  color: whitesmoke;
-  text-decoration: none;
+  color: rgb(200, 200, 200);
   font-size: 20px;
 }
 
 footer .footer-icons a i{
   padding: 5px;
+}
+
+footer .footer-icons a i:hover{
+  background-color: rgb(25, 25, 25);
+  border-radius: 5px;
+  transition: 0.5s;
+  color: white;
 }
