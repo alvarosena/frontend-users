@@ -1,5 +1,5 @@
 ## Consume API in the frontend
 
 
-- Sign In page
+- Sign Up page
 <img src="./images/signin.png" alt="sign-in-page">
