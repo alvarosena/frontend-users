@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
+  <title>Log In</title>
 </head>
 <body>
   <a class="title" target="_blank" href="https://github.com/alvarosena/services-for-users">Services for users</a>
   <div class="form-group">
-    <h2>Welcome</h2>
+    <h2>Welcome back</h2>
     <form id="myForm" name="myForm" action="" method="post">
-      <input type="text" id="username" name="username" placeholder="@username" autofocus autocomplete="off"><br>
       <input type="email" id="email" name="email" placeholder="user@example.com" autofocus autocomplete="off"><br>
       <input type="password" id="password" name="password" placeholder="Password" autofocus autocomplete="off"><br>
-      <button type="button" onclick="createUser()">Sign up</button>
+      <button type="button" onclick="login()">Log In</button>
     </form>
-    <p>Already Sign in? <a href="">Log In</a></p><br>
+    <p>I don't have an account <a href="">Sign Up</a></p><br>
+    <a class="update" href=""><i class="fa fa-pencil" aria-hidden="true"></i> Update username</a>
+    <a class="delete" href=""><i class="fa fa-trash" aria-hidden="true"></i> Delete account</a>
   </div>
   <footer>
-    <div class="footer-icons">
-      <a target="_blank" href="https://www.linkedin.com/in/alvarosen4"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-      <a target="_blank" href="https://github.com/alvarosena/frontend-users"><i class="fa fa-github" aria-hidden="true"></i></a>
-      <a target="_blank" href="https://www.instagram.com/alvarosen4"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <div class="login-footer">
+      <div class="footer-icons">
+        <a target="_blank" href="https://www.linkedin.com/in/alvarosen4"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://github.com/alvarosena/frontend-users"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.instagram.com/alvarosen4"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
     </div>
   </footer>
 </body>
+</body>
 <script>
 
-  
-function createUser() {
+function login() {
 
-  const user = {
-    username: document.getElementById("username").value,
+  const login = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   }
-  console.log(user);
 
-  fetch('http://localhost:5555/users', {
+  fetch('http://localhost:5555/users/authenticate', {
     method: "POST",
-    body: JSON.stringify(user),
+    body: JSON.stringify(login),
     headers: {"Content-type": "application/json; charset=UTF-8"}
   })
-  .then(response => response.json())
+  .then(response => response.json());
+  
 }
 
 </script>
+
 </html>

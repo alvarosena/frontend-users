@@ -17,12 +17,12 @@
   border-radius: 5px;
 }
 
-.form {
+.form-group {
   text-align: center;
 }
 
 
-.form input{
+.form-group input{
   padding: 5px;
   margin: 10px;
   color: whitesmoke;
@@ -37,12 +37,12 @@
   width: 250px;
 }
 
-.form input:hover{
+.form-group input:hover{
   transition: 0.5s;
   padding: 10px;
 }
 
-.form button{
+.form-group button{
   border: none;
   background-color: rgb(155, 99, 213);
   color: white;
@@ -55,53 +55,53 @@
   font-size: 14px;
 }
 
-.form button:hover{
-  transition: 0.5s;
-  padding: 10px;
-}
-
-.form button:hover{
+.form-group button:hover{
   background-color:rgb(170, 100, 220);
   transition: 0.5s;
 }
 
-.form h2{
-  animation: reverse;
+.form-group h2{
   font-size: 30px;
   color: rgb(155, 99, 213);
-  cursor: pointer;
 }
 
 
 
-.form p {
+.form-group p {
   color: whitesmoke;
 }
 
-.form p a{
+.form-group p a{
   color: rgb(155, 99, 213);
   text-decoration: none;
 }
 
-.form p a:hover{
+.form-group p a:hover{
   transition: 0.5s;
   padding: 5px;
   font-size: 20px;
 }
 
-.form a i{
-  font-size: 25px;
+.form-group a {
+  font-size: 16px;
+  background-color: rgb(40, 40, 40);
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 5px;
 }
 
-.form .facebook {
-  margin-right: 5px;
-  color:rgb(155, 99, 213);
+.form-group a:hover{
+  background-color: rgb(50, 50, 50);
+  transition: 0.5s;
+  color: white;
 }
 
-
-.form .twitter{
-  color: rgb(155, 99, 213);
+.form-group a i {
+  background-color: rgb(40, 40, 40);
 }
+
 
 footer {
   margin-top: 80px;
